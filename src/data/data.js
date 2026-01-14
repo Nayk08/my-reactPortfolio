@@ -1,8 +1,8 @@
-import fb from "../../public/icons8-facebook-logo-50.png";
-import github from "../../public/icons8-github-logo-50.png";
-import linkedIn from "../../public/icons8-linkedin-50.png";
-import Bryzahcov from "../../public/dentist.jpg";
-import TravelEase from "../../public/travelEase.jpg";
+import fb from "../assets/icons8-facebook-logo-50.png";
+import github from "../assets/icons8-github-logo-50.png";
+import linkedIn from "../assets/icons8-linkedin-50.png";
+import Bryzahcov from "../assets/dentist.jpg";
+import TravelEase from "../assets/travelEase.jpg";
 
 export const navBarData = [
   {

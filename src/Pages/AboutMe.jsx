@@ -1,7 +1,7 @@
 import Section from "../components/Section.jsx";
 import Button from "../components/Button.jsx";
 import { Myabout, email } from "../data/data.js";
-import img from "../../public/kyan.png";
+import img from "../assets/kyan.png";
 
 import { useContext } from "react";
 import { MyPortfolioContext } from "../store/Portfolio-store.jsx";

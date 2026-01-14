@@ -1,14 +1,14 @@
-import css from "../../public/csslogo-removebg-preview.png";
-import csharp from "../../public/chsarp.png";
+import css from "../assets/csslogo-removebg-preview.png";
+import csharp from "../assets/chsarp.png";
 
-import html from "../../public/htmllogo-removebg-preview.png";
-import js from "../../public/js_logo-removebg-preview.png";
-import bootstrap from "../../public/bootstraplogo.jpg";
-import react from "../../public/reactlogo.png";
-import tailwinds from "../../public/tailwindlogo-removebg-preview.png";
-import nodejs from "../../public/nodejslogo.png";
-import postgre from "../../public/postgrelogo.png";
-import ssms from "../../public/ssmslogo-removebg-preview.png";
+import html from "../assets/htmllogo-removebg-preview.png";
+import js from "../assets/js_logo-removebg-preview.png";
+import bootstrap from "../assets/bootstraplogo.jpg";
+import react from "../assets/reactlogo.png";
+import tailwinds from "../assets/tailwindlogo-removebg-preview.png";
+import nodejs from "../assets/nodejslogo.png";
+import postgre from "../assets/postgrelogo.png";
+import ssms from "../assets/ssmslogo-removebg-preview.png";
 
 export const myTechSkills = [
   {
