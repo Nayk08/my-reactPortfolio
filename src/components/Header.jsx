@@ -5,6 +5,7 @@ import { MyPortfolioContext } from "../store/Portfolio-store";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { handleContent, currentPage } = useContext(MyPortfolioContext);
+  
 
   return (
     <header className="sticky top-0 z-50 bg-slate-900">
