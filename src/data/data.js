@@ -128,6 +128,7 @@ export const projects = [
     title: "Bryzahcov Dental System",
     githubUrl: "https://github.com/Nayk08/MiniCapstone_Scheduling",
     technologyUsed: ["C#", "SQL", "Winform"],
+
     description:
       "A comprehensive dental clinic management system with patient records, appointment scheduling, and billing modules.",
     content: [
@@ -165,6 +166,8 @@ export const projects = [
     image: selflogo,
     githubUrl:
       "https://github.com/Nayk08/Online-Sales-Inventory-with-Feature-Client-",
+    websiteUrl:
+      "https://nayk08-online-sales-inventory-with-git-ea5197-nayk08s-projects.vercel.app/",
     technologyUsed: [
       "Node.js",
       "PostgreSQL",

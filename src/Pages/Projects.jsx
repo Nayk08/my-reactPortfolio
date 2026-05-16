@@ -1,7 +1,7 @@
 import Section from "../components/Section";
 import Button from "../components/Button";
 import { projects } from "../data/data";
-import { useRef , useState } from "react";
+import { useRef, useState } from "react";
 import ProjectModal from "../components/ProjectModal";
 
 export default function Projects() {
@@ -79,6 +79,17 @@ export default function Projects() {
                     >
                       GitHub
                     </a>
+
+                    {project.websiteUrl && (
+                      <a
+                        href={project.websiteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 py-3 px-4 bg-blue-500 hover:bg-blue-600 text-gray-100 rounded-lg text-center transition-all duration-300 hover:scale-105"
+                      >
+                        Website
+                      </a>
+                    )}
                     <button
                       onClick={() => {
                         setSelectedProject(project); // set project for modal
