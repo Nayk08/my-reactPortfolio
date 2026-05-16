@@ -16,7 +16,7 @@ import BryzahcovRecords from "../assets/DentistRecords.jpg";
 import BryzahcovAppointmenRecords from "../assets/DentistAppoinmentRecords.jpg";
 
 import selfDashboard from "../assets/SelfProject/selfProject-dashboard.png";
-import selfInventory from "../assets/SelfProject/selfProject-inventory.png";
+import selfInventory from "../assets/SelfProject/selfProject-Inventory.png";
 import selfCart from "../assets/SelfProject/selfProject-cart.png";
 import selfPayment from "../assets/SelfProject/selfProject-payment.png";
 import selfaddProduct from "../assets/SelfProject/selfProject-addProductModal.png";
