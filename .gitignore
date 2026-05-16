@@ -1,24 +1,157 @@
-# Logs
-logs
-*.log
+# ===========================
+# ENVIRONMENT & SECRETS
+# ===========================
+.env
+.env.*
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.staging
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+*.jks
+secrets.json
+secrets.yaml
+secrets.yml
+config/secrets.*
+*secret*
+*password*
+*credential*
+*private*
+
+# ===========================
+# NODE & DEPENDENCIES
+# ===========================
+node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+.npm
+.yarn
 
-node_modules
+# ===========================
+# BUILD OUTPUT
+# ===========================
 dist
 dist-ssr
-*.local
+build
+out
+.output
+coverage
 
-# Editor directories and files
+# ===========================
+# LOGS
+# ===========================
+logs
+*.log
+*.log.*
+
+# ===========================
+# CACHE & TEMP FILES
+# ===========================
+.cache
+.temp
+.tmp
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.bak
+*.backup
+
+# ===========================
+# EDITOR & IDE
+# ===========================
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.iml
+.project
+.classpath
+
+# ===========================
+# OS FILES
+# ===========================
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ===========================
+# DATABASE
+# ===========================
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+dump.sql
+*.sql
+
+# ===========================
+# FIREBASE / SUPABASE / AUTH
+# ===========================
+firebase-debug.log
+.firebaserc
+firebase.json
+firestore-debug.log
+*serviceAccountKey.json
+*service-account*.json
+google-services.json
+GoogleService-Info.plist
+
+# ===========================
+# CLOUD & DEPLOYMENT
+# ===========================
+.vercel
+.netlify
+.aws
+aws-exports.js
+amplify/
+.serverless/
+terraform.tfvars
+*.tfstate
+*.tfstate.*
+
+# ===========================
+# PACKAGE MANAGER LOCKS
+# (keep only one, delete others)
+# ===========================
+# package-lock.json  ← uncomment if using yarn
+# yarn.lock          ← uncomment if using npm
+
+# ===========================
+# TESTING
+# ===========================
+coverage/
+.nyc_output
+*.lcov
+test-results/
+playwright-report/
+
+# ===========================
+# MISC SENSITIVE
+# ===========================
+*.local
+*.orig
+.history
+notes.txt
+TODO.txt
+NOTES.md

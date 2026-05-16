@@ -15,6 +15,14 @@ import BryzahcovCalendar from "../assets/DentistCalendar.jpg";
 import BryzahcovRecords from "../assets/DentistRecords.jpg";
 import BryzahcovAppointmenRecords from "../assets/DentistAppoinmentRecords.jpg";
 
+import selfDashboard from "../assets/SelfProject/selfProject-dashboard.png";
+import selfInventory from "../assets/SelfProject/selfProject-inventory.png";
+import selfCart from "../assets/SelfProject/selfProject-cart.png";
+import selfPayment from "../assets/SelfProject/selfProject-payment.png";
+import selfaddProduct from "../assets/SelfProject/selfProject-addProductModal.png";
+import selfPaymentModal from "../assets/SelfProject/selfProject-paymentModal.png";
+import selflogo from "../assets/sales-in.png";
+
 export const navBarData = [
   {
     id: 2,
@@ -146,6 +154,61 @@ export const projects = [
         image: BryzahcovAppointmenRecords,
         title: "Appointments",
         description: "Schedule and track upcoming patient appointments.",
+      },
+    ],
+  },
+
+  {
+    id: 3,
+
+    title: "Online-Sales-Inventory-System ",
+    image: selflogo,
+    githubUrl:
+      "https://github.com/Nayk08/Online-Sales-Inventory-with-Feature-Client-",
+    technologyUsed: [
+      "Node.js",
+      "PostgreSQL",
+      "React, Tailwind CSS, Express.js",
+    ],
+    description:
+      "An online sales inventory system that allows businesses to manage products, track sales, and generate reports.",
+    content: [
+      {
+        id: 1,
+        image: selfDashboard,
+        title: "Dashboard",
+        description: "Overview of sales and inventory metrics.",
+      },
+      {
+        id: 2,
+        image: selfInventory,
+        title: "Inventory Management",
+        description: "Manage product listings and stock levels.",
+      },
+      {
+        id: 3,
+        image: selfCart,
+        title: "Shopping Cart",
+        description: "Add and manage items in the shopping cart.",
+      },
+      {
+        id: 4,
+        image: selfPayment,
+        title: "Payment Processing",
+        description: "Secure payment handling and transaction management.",
+      },
+      {
+        id: 5,
+        image: selfaddProduct,
+        title: "Add Product",
+        description: "Create and add new products to the inventory.",
+      },
+      {
+        id: 6,
+        image: selfPaymentModal,
+        title: "Payment Modal",
+        description:
+          "Modal for processing payments and confirming transactions.",
       },
     ],
   },

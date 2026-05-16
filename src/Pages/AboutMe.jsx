@@ -1,7 +1,8 @@
 import Section from "../components/Section.jsx";
 import Button from "../components/Button.jsx";
 import { Myabout, email } from "../data/data.js";
-import img from "../assets/kyan.png";
+import img from "../assets/Gemini_Generated_Image_qzq4ikqzq4ikqzq4.png";
+import resume from "../assets/VILLARIN_KYAN_RESUME.pdf";
 
 import { useContext } from "react";
 import { MyPortfolioContext } from "../store/Portfolio-store.jsx";
@@ -57,26 +58,22 @@ export default function AboutMe() {
           ))}
         </div>
 
-        {/* Buttons with improved styling */}
-        <div className="flex flex-col justify-center sm:flex-row gap-4 w-full max-w-md">
-          <Button
-            onClick={() => handleContent("Skills")}
-            variant="primary"
-            className="flex-1 py-3 px-6 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-          >
-            <span className="flex items-center justify-center gap-2">
-              View Skills
-              <span className="text-lg">→</span>
-            </span>
+        <div className="flex flex-col justify-center sm:flex-row gap-4 w-full max-w-xl">
+          <Button onClick={() => handleContent("Skills")} variant="primary">
+            View Skills <span className="text-lg">→</span>
           </Button>
-          <Button
-            onClick={() => handleContent("Projects")}
-            variant="outline"
-            className="flex-1 py-3 px-6 border-2 border-gray-600 hover:border-purple-500 text-gray-300 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
-          >
-            View Projects
-            <span className="text-lg">→</span>
+
+          <Button onClick={() => handleContent("Projects")} variant="outline">
+            View Projects <span className="text-lg">→</span>
           </Button>
+
+          <a
+            href={resume}
+            download="Kyan_Villarin_Resume.pdf"
+            className="flex-1 py-3 px-6 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 text-center flex items-center justify-center gap-2 text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 hover:shadow-lg"
+          >
+            CV <span className="text-lg">↓</span>
+          </a>
         </div>
       </div>
 
