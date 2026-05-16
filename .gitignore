@@ -1,5 +1,5 @@
-echo "node_modules
-dist
+node_modules/
+dist/
 .env
 .env.local
-.DS_Store" > .gitignore
+.DS_Store
