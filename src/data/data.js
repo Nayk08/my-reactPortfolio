@@ -23,6 +23,15 @@ import selfaddProduct from "../assets/SelfProject/selfProject-addProductModal.pn
 import selfPaymentModal from "../assets/SelfProject/selfProject-paymentModal.png";
 import selflogo from "../assets/sales-in.png";
 
+import LandingPAge from "../assets/Fitworx/LandingPage.png";
+import LoginPage from "../assets/Fitworx/LoginPage.png";
+import Payment from "../assets/Fitworx/Paymentsft.png";
+import Cartft from "../assets/Fitworx/Cartft.png";
+import DashboardFt from "../assets/Fitworx/DashboardFt.png";
+import Logbook from "../assets/Fitworx/Logboook.png";
+import Reservation from "../assets/Fitworx/Reservation.png";
+import Stock from "../assets/Fitworx/Stock.png";
+
 export const navBarData = [
   {
     id: 2,
@@ -83,9 +92,11 @@ export const projects = [
   {
     id: 1,
     image: TravelEase,
+    status: "Finished",
     title: "Travel Ease",
+    Contributor: ["Kyan Villarin"],
     githubUrl: "https://github.com/Nayk08/TechnoSystem",
-    technologyUsed: ["C#", "SQL", "Winform"],
+    technologyUsed: ["C#", "SSMS", "Winform"],
     description:
       "A travel management application that helps users plan trips, manage itineraries, and track expenses.",
     content: [
@@ -125,9 +136,11 @@ export const projects = [
   {
     id: 2,
     image: Bryzahcov,
+    status: "Finished",
+    Contributor: ["Kyan Villarin"],
     title: "Bryzahcov Dental System",
     githubUrl: "https://github.com/Nayk08/MiniCapstone_Scheduling",
-    technologyUsed: ["C#", "SQL", "Winform"],
+    technologyUsed: ["C#", "SSMS", "Winform"],
 
     description:
       "A comprehensive dental clinic management system with patient records, appointment scheduling, and billing modules.",
@@ -161,9 +174,10 @@ export const projects = [
 
   {
     id: 3,
-
     title: "Online-Sales-Inventory-System ",
     image: selflogo,
+    status: "Ongoing",
+    Contributor: ["Kyan Villarin"],
     githubUrl:
       "https://github.com/Nayk08/Online-Sales-Inventory-with-Feature-Client-",
     websiteUrl:
@@ -171,7 +185,9 @@ export const projects = [
     technologyUsed: [
       "Node.js",
       "PostgreSQL",
-      "React, Tailwind CSS, Express.js",
+      "React",
+      "Tailwind CSS",
+      "Express.js",
     ],
     description:
       "An online sales inventory system that allows businesses to manage products, track sales, and generate reports.",
@@ -212,6 +228,75 @@ export const projects = [
         title: "Payment Modal",
         description:
           "Modal for processing payments and confirming transactions.",
+      },
+    ],
+  },
+  {
+    id: 4,
+    image: LandingPAge,
+    status: "Finished",
+    description:
+      "A fitness center management system with member registration, class scheduling, and payment processing.",
+    title:
+      "ONLINE GYM FACILITY MANAGEMENT WITH SALES AND INVENTORY FOR FITWORX GYM",
+    githubUrl: "https://github.com/deloyxd/ogfmsi",
+    websiteUrl: "https://fitworxgymph.web.app/",
+    Contributor: [
+      "Kyan Villarin",
+      "Jestley Estipona",
+      "Enzo Daniela",
+      "Jun Gin De Jose",
+    ],
+    technologyUsed: [
+      "HTML",
+      "CSS",
+      "JS",
+      " Tailwind CSS",
+      "ExpressJs",
+      "MySQL",
+      "Node.js",
+      "Firebase",
+    ],
+    content: [
+      {
+        id: 1,
+        image: LoginPage,
+        title: "Login Page",
+        description: "Secure login for gym members and staff.",
+      },
+      {
+        id: 2,
+        image: DashboardFt,
+        title: "Dashboard",
+        description: "Overview of gym operations and statistics.",
+      },
+      {
+        id: 3,
+        image: Cartft,
+        description:
+          "This is the cart page where users can view and manage their selected classes or products.",
+        title: "Cart",
+      },
+      {
+        id: 4,
+        image: Payment,
+        title: "Payment",
+        description:
+          "Secure payment processing for class bookings and product purchases.",
+      },
+      {
+        id: 5,
+        image: Logbook,
+        title: "Logbook",
+        description:
+          "A logbook feature for tracking member attendance and class participation.",
+      },
+      {
+        id: 6,
+        image: Reservation,
+        title: "Reservation",
+        description:
+          "A reservation system for booking classes and gym facilities.",
       },
     ],
   },

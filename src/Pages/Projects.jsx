@@ -50,32 +50,71 @@ export default function Projects() {
 
                 {/* Content Section */}
                 <div className="lg:w-3/5 p-6 lg:p-8">
+                  {/* Title */}
                   <h3 className="text-2xl lg:text-3xl font-bold text-gray-100 mb-3 group-hover:text-blue-300 transition-colors duration-300">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-300 mb-6">{project.description}</p>
+                  {/* Dynamic Status Badge */}
+                  <span
+                    className={`inline-block px-3 py-1 text-sm font-medium rounded-full mb-4 ${
+                      project.status === "Finished"
+                        ? "bg-green-500/20 text-green-300"
+                        : "bg-yellow-500/20 text-yellow-300"
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+
+                  {/* Description */}
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Contributors */}
+                  {project.Contributor && project.Contributor.length > 0 && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">
+                        Contributors
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.Contributor.map((name, index) => (
+                          <span
+                            key={index}
+                            className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-blue-500/10 text-blue-300 border border-blue-500/20 backdrop-blur-sm hover:bg-blue-500/20 hover:border-blue-400/40 hover:text-blue-200 transition-all duration-300 cursor-default"
+                          >
+                            {name}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologyUsed.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1.5 bg-gray-700/50 text-gray-300 rounded-full text-sm hover:bg-gray-600/70 transition-colors duration-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                  <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">
+                    Technologies Used
+                  </h4>
+                  {project.technologyUsed &&
+                    project.technologyUsed.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.technologyUsed.map((tech, index) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1.5 bg-blue-700/50 text-gray-300 rounded-full text-sm hover:bg-blue-600/70 transition-colors duration-300"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
 
                   {/* Action Buttons */}
-
-                  <div className="flex gap-3">
+                  <div className="grid grid-cols-1 sm:flex sm:items-center gap-3 w-full">
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 py-3 px-4 bg-gray-700/60 hover:bg-gray-600/80 text-gray-100 rounded-lg text-center transition-all duration-300 hover:scale-105"
+                      className="flex-1 py-3 px-4 bg-gray-700/60 hover:bg-gray-600/80 text-gray-100 rounded-lg text-center font-medium transition-all duration-300 hover:scale-[1.02] active:scale-95"
                     >
                       GitHub
                     </a>
@@ -85,17 +124,18 @@ export default function Projects() {
                         href={project.websiteUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 py-3 px-4 bg-blue-500 hover:bg-blue-600 text-gray-100 rounded-lg text-center transition-all duration-300 hover:scale-105"
+                        className="flex-1 py-3 px-4 bg-blue-500 hover:bg-blue-600 text-gray-100 rounded-lg text-center font-medium transition-all duration-300 hover:scale-[1.02] active:scale-95"
                       >
                         Website
                       </a>
                     )}
+
                     <button
                       onClick={() => {
-                        setSelectedProject(project); // set project for modal
-                        modalRef.current.open(); // open modal
+                        setSelectedProject(project);
+                        modalRef.current?.open(); // Using optional chaining here is safer
                       }}
-                      className="flex-1 py-3 px-4 bg-orange-500 hover:bg-orange-600 text-gray-100 rounded-lg text-center transition-all duration-300 hover:scale-105"
+                      className="flex-1 py-3 px-4 bg-orange-500 hover:bg-orange-600 text-gray-100 rounded-lg text-center font-medium transition-all duration-300 hover:scale-[1.02] active:scale-95"
                     >
                       View Details
                     </button>

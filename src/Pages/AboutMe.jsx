@@ -72,7 +72,7 @@ export default function AboutMe() {
             download="Kyan_Villarin_Resume.pdf"
             className="flex-1 py-3 px-6 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 text-center flex items-center justify-center gap-2 text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 hover:shadow-lg"
           >
-            CV <span className="text-lg">↓</span>
+            Resume <span className="text-lg">↓</span>
           </a>
         </div>
       </div>
