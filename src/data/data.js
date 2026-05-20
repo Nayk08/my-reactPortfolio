@@ -32,6 +32,8 @@ import Logbook from "../assets/Fitworx/Logboook.png";
 import Reservation from "../assets/Fitworx/Reservation.png";
 import Stock from "../assets/Fitworx/Stock.png";
 
+import indeed from "../assets/icons.png";
+
 export const navBarData = [
   {
     id: 2,
@@ -83,8 +85,8 @@ export const email = [
   },
   {
     id: 3,
-    link: "https://www.facebook.com/kyan.villarin.3",
-    icons: fb,
+    link: "https://profile.indeed.com/?hl=en_PH&co=PH&from=gnav-homepage",
+    icons: indeed,
   },
 ];
 
