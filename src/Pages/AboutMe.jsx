@@ -2,7 +2,7 @@ import Section from "../components/Section.jsx";
 import Button from "../components/Button.jsx";
 import { Myabout, email } from "../data/data.js";
 import img from "../assets/Gemini_Generated_Image_qzq4ikqzq4ikqzq4.png";
-import resume from "../assets/VILLARIN_KYAN_RESUME.pdf";
+import resume from "../assets/Villarin_Kyan.pdf";
 
 import { useContext } from "react";
 import { MyPortfolioContext } from "../store/Portfolio-store.jsx";
