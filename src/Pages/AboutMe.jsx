@@ -15,8 +15,8 @@ export default function AboutMe() {
       <div className="flex flex-col items-center space-y-8">
         {/* Animated gradient background */}
         <div className="relative group">
-          <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-full blur-2xl opacity-70 group-hover:opacity-90 transition-opacity duration-500 animate-gradient-shift"></div>
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-lg opacity-30 animate-pulse-slow"></div>
+          <div className="absolute -inset-2 bg-gradient-to-r from-sky-600 via-cyan-500 to-blue-600 rounded-full blur-2xl opacity-70 group-hover:opacity-90 transition-opacity duration-500 animate-gradient-shift"></div>
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full blur-lg opacity-30 animate-pulse-slow"></div>
 
           {/* Profile Image with hover effects */}
           <img
@@ -38,9 +38,9 @@ export default function AboutMe() {
           />
 
           {/* Floating dots decoration */}
-          <div className="absolute -top-2 -right-2 w-4 h-4 bg-purple-500 rounded-full animate-bounce"></div>
+          <div className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-500 rounded-full animate-bounce"></div>
           <div
-            className="absolute -bottom-2 -left-2 w-3 h-3 bg-indigo-500 rounded-full animate-bounce"
+            className="absolute -bottom-2 -left-2 w-3 h-3 bg-sky-500 rounded-full animate-bounce"
             style={{ animationDelay: "0.2s" }}
           ></div>
         </div>
@@ -51,7 +51,7 @@ export default function AboutMe() {
             <a
               key={data.id}
               href={data.link}
-              className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-300 hover:scale-110 transform"
+              className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-300 hover:scale-110 transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
             >
               <img className="w-5 h-5 text-gray-300" src={data.icons} alt="" />
             </a>
@@ -70,7 +70,7 @@ export default function AboutMe() {
           <a
             href={resume}
             download="Kyan_Villarin_Resume.pdf"
-            className="flex-1 py-3 px-6 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 text-center flex items-center justify-center gap-2 text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 hover:shadow-lg"
+            className="flex-1 py-3 px-6 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 text-center flex items-center justify-center gap-2 text-white bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
           >
             Resume <span className="text-lg">↓</span>
           </a>
@@ -81,13 +81,13 @@ export default function AboutMe() {
       <div className="max-w-3xl w-full rounded-2xl p-8 sm:p-10 text-center transform transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm border border-gray-700/50 shadow-2xl">
         {/* Animated accent bar */}
         <div className="relative h-1 w-32 mx-auto mb-8 overflow-hidden rounded-full bg-gray-700">
-          <div className="absolute h-full w-1/3 bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-shimmer"></div>
+          <div className="absolute h-full w-1/3 bg-gradient-to-r from-transparent via-sky-500 to-transparent animate-shimmer"></div>
         </div>
 
         {/* Headings with gradient text */}
         <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
           Hi, I'm{" "}
-          <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
+          <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text">
             Kyan Villarin
           </span>
         </h1>
@@ -113,7 +113,7 @@ export default function AboutMe() {
         </div>
 
         {/* Additional info */}
-        <p className="mt-8 text-gray-400 text-sm sm:text-base leading-relaxed italic border-l-4 border-purple-500 pl-4 py-2 text-left">
+        <p className="mt-8 text-gray-400 text-sm sm:text-base leading-relaxed italic border-l-4 border-sky-500 pl-4 py-2 text-left">
           Passionate about creating beautiful, functional web experiences.
           Currently mastering modern frontend technologies and best practices.
         </p>

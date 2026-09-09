@@ -11,15 +11,15 @@ export default function Button({
   // Specific variants
   const variants = {
     primary:
-      "text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 hover:shadow-lg",
+      "text-white bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 hover:shadow-lg",
     outline:
-      "border-2 border-gray-600 hover:border-purple-500 text-gray-300 hover:text-white",
+      "border-2 border-gray-600 hover:border-sky-500 text-gray-300 hover:text-white",
   };
 
   return (
     <button
       onClick={onClick}
-      className={`${baseStyles} ${variants[variant]} ${className}`}
+      className={`${baseStyles} ${variants[variant]} ${className} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900`}
     >
       {children}
     </button>

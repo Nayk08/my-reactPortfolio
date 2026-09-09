@@ -34,6 +34,27 @@ import Stock from "../assets/Fitworx/Stock.png";
 
 import indeed from "../assets/icons.png";
 
+import PetVetLanding from "../assets/PetVet/PetVetLanding.png";
+import PetVetSignIn from "../assets/PetVet/PetVetSignIn.png";
+import PetVetDashboard from "../assets/PetVet/PetVetDashboard.png";
+import PetVetAppointmentCalendar from "../assets/PetVet/PetVetAppointmentCalendar.png";
+import PetVetConsultationTable from "../assets/PetVet/PetVetConsultationTable.png";
+import PetVetGroomingTable from "../assets/PetVet/PetVetGroomingTable.png";
+import PetVetOperationTable from "../assets/PetVet/PetVetOperationTable.png";
+import PetVetClientRecords from "../assets/PetVet/PetVetClientRecords.png";
+import PetVetAddClientModal from "../assets/PetVet/PetVetAddClientModal.png";
+import PetVetPetRecords from "../assets/PetVet/PetVetPetRecords.png";
+import PetVetAddPetModal from "../assets/PetVet/PetVetAddPetModal.png";
+import PetVetCart from "../assets/PetVet/PetVetCart.png";
+import PetVetPaymentsTable from "../assets/PetVet/PetVetPaymentsTable.png";
+import PetVetPaymentDetailsModal from "../assets/PetVet/PetVetPaymentDetailsModal.png";
+import PetVetOrderSummaryModal from "../assets/PetVet/PetVetOrderSummaryModal.png";
+import PetVetInventory from "../assets/PetVet/PetVetInventory.png";
+import PetVetAddProductModal from "../assets/PetVet/PetVetAddProductModal.png";
+import PetVetUserManagement from "../assets/PetVet/PetVetUserManagement.png";
+import PetVetRolesManagement from "../assets/PetVet/PetVetRolesManagement.png";
+import PetVetPermissionMatrix from "../assets/PetVet/PetVetPermissionMatrix.png";
+
 export const navBarData = [
   {
     id: 2,
@@ -178,7 +199,7 @@ export const projects = [
     id: 3,
     title: "Online-Sales-Inventory-System ",
     image: selflogo,
-    status: "Ongoing",
+    status: "Postponed",
     Contributor: ["Kyan Villarin"],
     githubUrl:
       "https://github.com/Nayk08/Online-Sales-Inventory-with-Feature-Client-",
@@ -299,6 +320,164 @@ export const projects = [
         title: "Reservation",
         description:
           "A reservation system for booking classes and gym facilities.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    image: PetVetLanding,
+    status: "In Progress",
+    title: "PetVet Cycle Animal and Grooming Center",
+    Contributor: ["Kyan Villarin"],
+    githubUrl: "https://github.com/Nayk08/Petvet",
+    websiteUrl: "https://petvet-cyan.vercel.app/",
+    technologyUsed: [
+      "React",
+      "Vite",
+      "React Router",
+      "TanStack Query",
+      "Zustand",
+      "Tailwind CSS",
+      "Radix UI",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Zod",
+      "Cloudinary",
+      "Render",
+    ],
+    description:
+      "A full-stack veterinary clinic management system built around a database-driven Role-Based Access Control (RBAC) engine. Every navigation item, route, and API endpoint is gated by a permission matrix stored in PostgreSQL — nothing is hardcoded to a role name, so roles and their capabilities can be changed at runtime from the Permissions UI without touching code.",
+    content: [
+      {
+        id: 1,
+        image: PetVetLanding,
+        title: "Landing Page",
+        description:
+          "Public-facing homepage introducing the clinic and its online booking.",
+      },
+      {
+        id: 2,
+        image: PetVetSignIn,
+        title: "Sign In",
+        description: "Portal sign in for clients, staff, and veterinarians.",
+      },
+      {
+        id: 3,
+        image: PetVetDashboard,
+        title: "Dashboard",
+        description:
+          "Live overview of appointments, consultations, grooming, and critical operations.",
+      },
+      {
+        id: 4,
+        image: PetVetAppointmentCalendar,
+        title: "Appointment Calendar",
+        description: "Calendar view for booking and managing appointments.",
+      },
+      {
+        id: 5,
+        image: PetVetConsultationTable,
+        title: "Consultation Records",
+        description:
+          "Real-time status tracking and record management for consultations.",
+      },
+      {
+        id: 6,
+        image: PetVetGroomingTable,
+        title: "Grooming Records",
+        description:
+          "Real-time status tracking and record management for grooming appointments.",
+      },
+      {
+        id: 7,
+        image: PetVetOperationTable,
+        title: "Operation Records",
+        description:
+          "Real-time status tracking and record management for operations.",
+      },
+      {
+        id: 8,
+        image: PetVetClientRecords,
+        title: "Client Records",
+        description: "Manage client information and their linked pets.",
+      },
+      {
+        id: 9,
+        image: PetVetAddClientModal,
+        title: "Add New Client",
+        description: "Form for registering a new client into the system.",
+      },
+      {
+        id: 10,
+        image: PetVetPetRecords,
+        title: "Pet Records",
+        description:
+          "Per-client pet profiles including breed, weight, and medical details.",
+      },
+      {
+        id: 11,
+        image: PetVetAddPetModal,
+        title: "Add New Pet",
+        description: "Form for adding a pet to a client's profile.",
+      },
+      {
+        id: 12,
+        image: PetVetCart,
+        title: "Point of Sale",
+        description: "Storefront for clinic products with cart management.",
+      },
+      {
+        id: 13,
+        image: PetVetPaymentsTable,
+        title: "Payments",
+        description:
+          "Real-time tracking of payment records across the clinic.",
+      },
+      {
+        id: 14,
+        image: PetVetPaymentDetailsModal,
+        title: "Payment Details",
+        description: "Detailed breakdown of an individual payment record.",
+      },
+      {
+        id: 15,
+        image: PetVetOrderSummaryModal,
+        title: "Order Summary",
+        description:
+          "Checkout flow supporting cash, GCash, and split payments.",
+      },
+      {
+        id: 16,
+        image: PetVetInventory,
+        title: "Inventory",
+        description:
+          "Stock and expiry tracking for clinic products and supplies.",
+      },
+      {
+        id: 17,
+        image: PetVetAddProductModal,
+        title: "Add New Product",
+        description: "Form for adding a new product to the inventory.",
+      },
+      {
+        id: 18,
+        image: PetVetUserManagement,
+        title: "User Management",
+        description: "Manage staff accounts, roles, and active status.",
+      },
+      {
+        id: 19,
+        image: PetVetRolesManagement,
+        title: "Roles Management",
+        description: "Define and manage the roles available in the system.",
+      },
+      {
+        id: 20,
+        image: PetVetPermissionMatrix,
+        title: "Permission Matrix",
+        description:
+          "Runtime control over what each role can view, create, edit, delete, or export per module.",
       },
     ],
   },

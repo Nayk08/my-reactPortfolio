@@ -4,7 +4,7 @@ import { MyPortfolioContext } from "../store/Portfolio-store";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const { handleContent, currentPage } = useContext(MyPortfolioContext);
+  const { handleContent, content: currentPage } = useContext(MyPortfolioContext);
   
 
   return (
@@ -26,9 +26,11 @@ export default function Header() {
                     <a
                       href={`#${slug}`}
                       className={`
-                        relative 
-                        pb-1.5  // Add padding at bottom for underline space
+                        relative
+                        pb-1.5
                         transition duration-300
+                        rounded-sm
+                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900
                         ${
                           isActive
                             ? "text-sky-400 font-semibold"
@@ -55,9 +57,11 @@ export default function Header() {
           {/* Mobile Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-200 text-2xl"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            className="md:hidden text-gray-200 text-2xl rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
           >
-            ☰
+            {isOpen ? "✕" : "☰"}
           </button>
         </div>
 
@@ -81,6 +85,7 @@ export default function Header() {
                       href={`#${slug}`}
                       className={`
                         block py-3 px-4 rounded-md transition duration-300
+                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400
                         ${
                           isActive
                             ? "text-sky-400 bg-sky-400/10 border-l-4 border-sky-400"

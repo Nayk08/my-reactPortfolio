@@ -13,13 +13,13 @@ export default function TechSkills() {
       <div className="w-full max-w-6xl">
         {/* Tech Skills Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
             Tech Skills
           </h2>
           <p className="text-gray-300 mt-4 text-lg">
             Technologies and tools I work with
           </p>
-          <div className="h-1 w-24 bg-gradient-to-r from-red-500 to-orange-500 mx-auto mt-6 rounded-full"></div>
+          <div className="h-1 w-24 bg-gradient-to-r from-sky-500 to-cyan-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
         {/* Tech Skills Grid - Fixed spacing */}
@@ -27,10 +27,10 @@ export default function TechSkills() {
           {myTechSkills.map((skill) => (
             <div
               key={skill.id}
-              className="group relative bg-gray-800/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-700/40 hover:border-red-500/60 transition-all duration-300 hover:shadow-xl hover:shadow-red-900/10 flex flex-col items-center justify-center min-h-[180px]"
+              className="group relative bg-gray-800/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-700/40 hover:border-sky-500/60 transition-all duration-300 hover:shadow-xl hover:shadow-sky-900/10 flex flex-col items-center justify-center min-h-[180px]"
             >
               {/* Hover Gradient Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900/0 via-transparent to-orange-900/0 group-hover:from-red-900/5 group-hover:to-orange-900/5 rounded-xl sm:rounded-2xl transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-900/0 via-transparent to-cyan-900/0 group-hover:from-sky-900/5 group-hover:to-cyan-900/5 rounded-xl sm:rounded-2xl transition-all duration-500"></div>
 
               {/* Skill Icon */}
               <div className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 mb-3 sm:mb-4 flex items-center justify-center">
@@ -42,7 +42,7 @@ export default function TechSkills() {
               </div>
 
               {/* Skill Title */}
-              <h3 className="text-base sm:text-lg font-semibold text-gray-100 text-center mb-1 sm:mb-2 group-hover:text-red-300 transition-colors duration-300">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-100 text-center mb-1 sm:mb-2 group-hover:text-sky-300 transition-colors duration-300">
                 {skill.title}
               </h3>
 

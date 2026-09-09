@@ -1,4 +1,10 @@
-export default function Section({ children, grid = 2 }) {
+export default function Section({
+  children,
+  grid = 2,
+  className = "",
+  bgClass = "bg-slate-900",
+  bgGradient = "from-slate-800/60 to-slate-900",
+}) {
   // Map numbers to Tailwind classes
   const colClasses = {
     1: "md:grid-cols-1",
@@ -9,15 +15,15 @@ export default function Section({ children, grid = 2 }) {
   };
 
   return (
-    <section className="relative bg-slate-900">
+    <section className={`relative ${bgClass}`}>
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-800/60 to-slate-900" />
+      <div className={`absolute inset-0 bg-gradient-to-b ${bgGradient}`} />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-24">
+      <div className={`relative mx-auto max-w-7xl px-6 py-24 ${className}`}>
         <div
           className={`grid grid-cols-1 ${
             colClasses[grid] || "md:grid-cols-2"
-          } gap-16 items-center`}
+          } ${grid === 1 ? "" : "gap-16 items-center"}`}
         >
           {children}
         </div>
