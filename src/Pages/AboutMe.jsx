@@ -1,125 +1,66 @@
-import Section from "../components/Section.jsx";
-import Button from "../components/Button.jsx";
-import { Myabout, email } from "../data/data.js";
+import { FiArrowRight, FiDownload } from "react-icons/fi";
+import { socials } from "../data/data.js";
 import img from "../assets/Gemini_Generated_Image_qzq4ikqzq4ikqzq4.png";
 import resume from "../assets/Resume/Kyan_Villarin_Resume.pdf";
 
-import { useContext } from "react";
-import { MyPortfolioContext } from "../store/Portfolio-store.jsx";
 export default function AboutMe() {
-  const { handleContent } = useContext(MyPortfolioContext);
-
   return (
-    <Section className="flex flex-col items-center space-y-12 py-16 px-4 sm:px-6 lg:px-0">
-      {/* Profile Image with Enhanced Gradient Glow */}
-      <div className="flex flex-col items-center space-y-8">
-        {/* Animated gradient background */}
-        <div className="relative group">
-          <div className="absolute -inset-2 bg-gradient-to-r from-sky-600 via-cyan-500 to-blue-600 rounded-full blur-2xl opacity-70 group-hover:opacity-90 transition-opacity duration-500 animate-gradient-shift"></div>
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full blur-lg opacity-30 animate-pulse-slow"></div>
-
-          {/* Profile Image with hover effects */}
-          <img
-            src={img}
-            alt="Kyan Villarin"
-            className="
-              relative
-              w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56
-              rounded-full
-              border-4 border-white/20
-              shadow-2xl
-              object-cover
-              transition-all duration-500
-              group-hover:scale-110
-              group-hover:border-white/40
-              group-hover:shadow-3xl
-              z-10
-            "
-          />
-
-          {/* Floating dots decoration */}
-          <div className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-500 rounded-full animate-bounce"></div>
-          <div
-            className="absolute -bottom-2 -left-2 w-3 h-3 bg-sky-500 rounded-full animate-bounce"
-            style={{ animationDelay: "0.2s" }}
-          ></div>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex gap-4">
-          {email.map((data) => (
-            <a
-              key={data.id}
-              href={data.link}
-              className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-300 hover:scale-110 transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-            >
-              <img className="w-5 h-5 text-gray-300" src={data.icons} alt="" />
-            </a>
-          ))}
-        </div>
-
-        <div className="flex flex-col justify-center sm:flex-row gap-4 w-full max-w-xl">
-          <Button onClick={() => handleContent("Skills")} variant="primary">
-            View Skills <span className="text-lg">→</span>
-          </Button>
-
-          <Button onClick={() => handleContent("Projects")} variant="outline">
-            View Projects <span className="text-lg">→</span>
-          </Button>
-
-          <a
-            href={resume}
-            download="Kyan_Villarin_Resume.pdf"
-            className="flex-1 py-3 px-6 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 text-center flex items-center justify-center gap-2 text-white bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-          >
-            Resume <span className="text-lg">↓</span>
-          </a>
-        </div>
-      </div>
-
-      {/* Enhanced Text Container with Glass Effect */}
-      <div className="max-w-3xl w-full rounded-2xl p-8 sm:p-10 text-center transform transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm border border-gray-700/50 shadow-2xl">
-        {/* Animated accent bar */}
-        <div className="relative h-1 w-32 mx-auto mb-8 overflow-hidden rounded-full bg-gray-700">
-          <div className="absolute h-full w-1/3 bg-gradient-to-r from-transparent via-sky-500 to-transparent animate-shimmer"></div>
-        </div>
-
-        {/* Headings with gradient text */}
-        <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
-          Hi, I'm{" "}
-          <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text">
-            Kyan Villarin
-          </span>
-        </h1>
-
-        <div className="inline-flex items-center justify-center mt-3 px-4 py-1 rounded-full bg-gray-800/50 border border-gray-700">
-          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse mr-2"></div>
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-300">
+    <section id="about" className="scroll-mt-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-[1fr_auto] md:py-32">
+        <div>
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-400">
+            <span className="h-2 w-2 rounded-full bg-emerald-400" />
             Junior Web Developer
-          </h2>
-        </div>
+          </p>
 
-        {/* Description with icons */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {Myabout.map((data) => (
-            <div
-              key={data.id}
-              className="flex items-center justify-center gap-3 p-4 rounded-lg bg-gray-800/30 hover:bg-gray-800/50 transition-colors duration-300"
+          <h1 className="mt-6 text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+            Kyan Villarin
+          </h1>
+
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
+            IT student and aspiring React developer. I build full-stack web
+            applications with React, Node.js and PostgreSQL, and I care about
+            clean, functional interfaces that are easy to use.
+          </p>
+
+          <div className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:items-center">
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition-colors hover:bg-zinc-200"
             >
-              <div className="text-2xl">{data.icon}</div>
-              <p className="text-gray-300">{data.description}</p>
+              View projects <FiArrowRight />
+            </a>
+            <a
+              href={resume}
+              download="Kyan_Villarin_Resume.pdf"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white/5"
+            >
+              Download résumé <FiDownload />
+            </a>
+
+            <div className="flex justify-center gap-1 sm:ml-3">
+              {socials.map((social) => (
+                <a
+                  key={social.id}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="rounded-lg p-3 text-xl text-zinc-400 transition-colors hover:bg-white/5 hover:text-white"
+                >
+                  <social.icon />
+                </a>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
 
-        {/* Additional info */}
-        <p className="mt-8 text-gray-400 text-sm sm:text-base leading-relaxed italic border-l-4 border-sky-500 pl-4 py-2 text-left">
-          Passionate about creating beautiful, functional web experiences.
-          Currently mastering modern frontend technologies and best practices.
-        </p>
-
-        {/* Tech stack hint */}
+        <img
+          src={img}
+          alt="Portrait of Kyan Villarin"
+          className="order-first h-40 w-40 rounded-2xl object-cover ring-1 ring-white/10 sm:h-56 sm:w-56 md:order-0 md:h-72 md:w-72"
+        />
       </div>
-    </Section>
+    </section>
   );
 }

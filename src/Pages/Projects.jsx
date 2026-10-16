@@ -1,151 +1,162 @@
-import Section from "../components/Section";
-import Button from "../components/Button";
-import { projects } from "../data/data";
 import { useRef, useState } from "react";
+import {
+  FiArrowRight,
+  FiCalendar,
+  FiExternalLink,
+  FiGithub,
+} from "react-icons/fi";
+import Section from "../components/Section";
 import ProjectModal from "../components/ProjectModal";
+import { projects } from "../data/data";
+
+const statusStyles = {
+  Finished: "bg-emerald-400/10 text-emerald-300 ring-emerald-400/20",
+  "In Progress": "bg-sky-400/10 text-sky-300 ring-sky-400/20",
+  Postponed: "bg-amber-400/10 text-amber-300 ring-amber-400/20",
+};
+
+const MAX_TECH = 6;
 
 export default function Projects() {
   const modalRef = useRef();
   const [selectedProject, setSelectedProject] = useState(null);
+
+  function openProject(project) {
+    setSelectedProject(project);
+    modalRef.current?.open();
+  }
+
+  // Newest first; the latest project gets the full-width featured card
+  const ordered = [...projects].reverse();
+
   return (
-    <>
+    <Section
+      id="projects"
+      eyebrow="Projects"
+      title="Selected work"
+      description="Web and desktop systems I've built, from solo projects to team capstones."
+    >
       <ProjectModal ref={modalRef} project={selectedProject} />
-      <Section
-        grid={1}
-        className="py-16 px-4 sm:px-6 lg:px-8"
-        bgClass="bg-gray-900"
-        bgGradient="from-gray-800/60 via-gray-700/40 to-gray-900"
-      >
-        {/* Section Header */}
-        <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
-            My Projects
-          </h2>
-          <p className="text-gray-300 mt-4 text-lg">
-            Here are some of the projects I've built to showcase my skills and
-            learning journey.
-          </p>
-          <div className="h-1 w-24 bg-gradient-to-r from-sky-500 to-cyan-500 mx-auto mt-6 rounded-full"></div>
-        </div>
 
-        {/* Projects - SINGLE COLUMN with side-by-side cards */}
-        <div className="max-w-6xl mx-auto space-y-8">
-          {" "}
-          {/* Remove grid classes */}
-          {projects.map((project) => (
-            <div
+      <div className="grid gap-6 md:grid-cols-2">
+        {ordered.map((project, index) => {
+          const featured = index === 0;
+          const team = (project.Contributor ?? []).filter(
+            (name) => name !== "Kyan Villarin"
+          );
+          const tech = project.technologyUsed ?? [];
+
+          return (
+            <article
               key={project.id}
-              className="group bg-gray-800/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/40 hover:border-sky-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-sky-900/20"
+              className={`group flex flex-col overflow-hidden rounded-2xl border border-white/5 bg-white/2 transition-colors hover:border-white/15 ${
+                featured ? "md:col-span-2 lg:flex-row" : ""
+              }`}
             >
-              {/* Project Content - Side by Side Layout */}
-              <div className="flex flex-col lg:flex-row">
-                {/* Image Section */}
-                <div className="lg:w-2/5 h-64 lg:h-auto overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                </div>
+              <button
+                onClick={() => openProject(project)}
+                aria-label={`View ${project.title} details`}
+                className={`aspect-video shrink-0 overflow-hidden bg-zinc-900 ${
+                  featured ? "lg:aspect-auto lg:w-3/5" : ""
+                }`}
+              >
+                <img
+                  src={project.image}
+                  alt=""
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </button>
 
-                {/* Content Section */}
-                <div className="lg:w-3/5 p-6 lg:p-8">
-                  {/* Title */}
-                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-100 mb-3 group-hover:text-sky-300 transition-colors duration-300">
+              <div className="flex flex-1 flex-col p-6 lg:p-8">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-lg font-semibold text-white sm:text-xl">
                     {project.title}
                   </h3>
-
-                  {/* Dynamic Status Badge */}
                   <span
-                    className={`inline-block px-3 py-1 text-sm font-medium rounded-full mb-4 ${
-                      project.status === "Finished"
-                        ? "bg-green-500/20 text-green-300"
-                        : "bg-yellow-500/20 text-yellow-300"
+                    className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ring-1 ring-inset ${
+                      statusStyles[project.status]
                     }`}
                   >
                     {project.status}
                   </span>
+                </div>
 
-                  {/* Description */}
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {project.description}
+                {project.timeline && (
+                  <p className="mt-2 inline-flex items-center gap-1.5 text-xs text-zinc-500">
+                    <FiCalendar /> {project.timeline}
                   </p>
+                )}
 
-                  {/* Contributors */}
-                  {project.Contributor && project.Contributor.length > 0 && (
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">
-                        Contributors
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.Contributor.map((name, index) => (
-                          <span
-                            key={index}
-                            className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-sky-500/10 text-sky-300 border border-sky-500/20 backdrop-blur-sm hover:bg-sky-500/20 hover:border-sky-400/40 hover:text-sky-200 transition-all duration-300 cursor-default"
-                          >
-                            {name}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                <p
+                  className={`mt-3 text-sm leading-relaxed text-zinc-400 ${
+                    featured ? "line-clamp-5 lg:line-clamp-none" : "line-clamp-3"
+                  }`}
+                >
+                  {project.description}
+                </p>
+
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {/* Extra tags only show on the wide featured card */}
+                  {tech.slice(0, featured ? tech.length : MAX_TECH).map((t, i) => (
+                    <li
+                      key={t}
+                      className={`rounded-md bg-white/5 px-2 py-1 text-xs text-zinc-300 ${
+                        i >= MAX_TECH ? "hidden lg:block" : ""
+                      }`}
+                    >
+                      {t}
+                    </li>
+                  ))}
+                  {tech.length > MAX_TECH && (
+                    <li
+                      className={`px-1 py-1 text-xs text-zinc-500 ${
+                        featured ? "lg:hidden" : ""
+                      }`}
+                    >
+                      +{tech.length - MAX_TECH} more
+                    </li>
                   )}
+                </ul>
 
-                  {/* Technologies */}
-                  <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">
-                    Technologies Used
-                  </h4>
-                  {project.technologyUsed &&
-                    project.technologyUsed.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.technologyUsed.map((tech, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1.5 bg-sky-700/50 text-gray-300 rounded-full text-sm hover:bg-sky-600/70 transition-colors duration-300"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    )}
+                {team.length > 0 && (
+                  <p className="mt-4 text-xs text-zinc-500">
+                    Team project with {team.join(", ")}
+                  </p>
+                )}
 
-                  {/* Action Buttons */}
-                  <div className="grid grid-cols-1 sm:flex sm:items-center gap-3 w-full">
+                <div className="mt-auto grid grid-cols-2 gap-2 pt-6 sm:flex sm:flex-wrap sm:items-center">
+                  <button
+                    onClick={() => openProject(project)}
+                    className="col-span-2 inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition-colors hover:bg-zinc-200"
+                  >
+                    View details <FiArrowRight />
+                  </button>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-medium text-zinc-300 transition-colors hover:bg-white/5 hover:text-white sm:border-transparent ${
+                      project.websiteUrl ? "" : "col-span-2"
+                    }`}
+                  >
+                    <FiGithub /> Code
+                  </a>
+                  {project.websiteUrl && (
                     <a
-                      href={project.githubUrl}
+                      href={project.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 py-3 px-4 bg-gray-700/60 hover:bg-gray-600/80 text-gray-100 rounded-lg text-center font-medium transition-all duration-300 hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-medium text-zinc-300 transition-colors hover:bg-white/5 hover:text-white sm:border-transparent"
                     >
-                      GitHub
+                      <FiExternalLink /> Live site
                     </a>
-
-                    {project.websiteUrl && (
-                      <a
-                        href={project.websiteUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 py-3 px-4 bg-sky-500 hover:bg-sky-600 text-gray-100 rounded-lg text-center font-medium transition-all duration-300 hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-                      >
-                        Website
-                      </a>
-                    )}
-
-                    <button
-                      onClick={() => {
-                        setSelectedProject(project);
-                        modalRef.current?.open();
-                      }}
-                      className="flex-1 py-3 px-4 bg-cyan-600 hover:bg-cyan-700 text-gray-100 rounded-lg text-center font-medium transition-all duration-300 hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-                    >
-                      View Details
-                    </button>
-                  </div>
+                  )}
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </Section>
-    </>
+            </article>
+          );
+        })}
+      </div>
+    </Section>
   );
 }

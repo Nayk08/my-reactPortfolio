@@ -1,123 +1,49 @@
-import css from "../assets/csslogo-removebg-preview.png";
-import csharp from "../assets/image.png";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiTailwindcss,
+  SiBootstrap,
+  SiNodedotjs,
+  SiExpress,
+  SiPhp,
+  SiCodeigniter,
+  SiCsharp,
+  SiPostgresql,
+  SiMicrosoftsqlserver,
+  SiGithub,
+  SiOpenai,
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { HiSparkles } from "react-icons/hi";
 
-import html from "../assets/htmllogo-removebg-preview.png";
-import js from "../assets/js_logo-removebg-preview.png";
-import bootstrap from "../assets/boot-removebg-preview.png";
-import react from "../assets/react-removebg-preview.png";
-import tailwinds from "../assets/tailwindlogo-removebg-preview.png";
-import nodejs from "../assets/nodejslogo.png";
-import postgre from "../assets/postgre-removebg-preview.png";
-import ssms from "../assets/ssmslogo-removebg-preview.png";
-import github from "../assets/github-removebg-preview.png";
-import expressjs from "../assets/expressjs.png";
-import java from "../assets/java-removebg-preview.png";
-import chatgpt from "../assets/chatgpt-removebg-preview.png";
-import codeigniter from "../assets/codeigniters.png";
-import claude from "../assets/ClaudeAI-removebg-preview.png";
-import php from "../assets/php.png";
+export const skillCategories = [
+  "Frontend",
+  "Backend & Desktop",
+  "Databases",
+  "Tools & AI",
+];
 
 export const myTechSkills = [
-  {
-    id: 1,
-    image: css,
-    title: "CSS",
-    status: "Intermediate",
-  },
-  {
-    id: 2,
-    image: csharp,
-    title: "C#",
-    status: "Intermediate",
-  },
-  {
-    id: 3,
-    image: ssms,
-    title: "SSMS",
-    status: "Intermediate",
-  },
-  {
-    id: 4,
-    image: html,
-    title: "HTML",
-    status: "Intermediate",
-  },
-  {
-    id: 5,
-    image: js,
-    title: "JS",
-    status: "Intermediate",
-  },
-  {
-    id: 6,
-    image: bootstrap,
-    title: "BOOTSTRAP",
-    status: "Intermediate",
-  },
-  {
-    id: 7,
-    image: react,
-    title: "REACT",
-    status: "Intermediate",
-  },
-  {
-    id: 8,
-    image: tailwinds,
-    title: "TAILWIND",
-    status: "Intermediate",
-  },
-  {
-    id: 9,
-    image: nodejs,
-    title: "NODEJS",
-    status: "Beginner",
-  },
-  {
-    id: 10,
-    image: postgre,
-    title: "POSTGRE SQL",
-    status: "Intermediate",
-  },
-  {
-    id: 11,
-    image: github,
-    title: "GITHUB",
-    status: "Beginner",
-  },
-  {
-    id: 12,
-    image: expressjs,
-    title: "EXPRESSJS",
-    status: "Intermediate",
-  },
-  {
-    id: 13,
-    image: java,
-    title: "JAVA",
-    status: "Beginner",
-  },
-  {
-    id: 14,
-    image: claude,
-    title: "CLAUDE AI",
-    status: "Beginner",
-  },
-  {
-    id: 15,
-    image: chatgpt,
-    title: "CHATGPT",
-    status: "Beginner",
-  },
-  {
-    id: 16,
-    image: codeigniter,
-    title: "CODEIGNITER",
-    status: "Beginner",
-  },
-  {
-    id: 17,
-    image: php,
-    title: "PHP",
-    status: "Beginner",
-  },
+  { id: 1, icon: SiHtml5, color: "#E34F26", title: "HTML", category: "Frontend", status: "Intermediate" },
+  { id: 2, icon: SiCss3, color: "#1572B6", title: "CSS", category: "Frontend", status: "Intermediate" },
+  { id: 3, icon: SiJavascript, color: "#F7DF1E", title: "JavaScript", category: "Frontend", status: "Intermediate" },
+  { id: 4, icon: SiReact, color: "#61DAFB", title: "React", category: "Frontend", status: "Intermediate" },
+  { id: 5, icon: SiTailwindcss, color: "#06B6D4", title: "Tailwind CSS", category: "Frontend", status: "Intermediate" },
+  { id: 6, icon: SiBootstrap, color: "#7952B3", title: "Bootstrap", category: "Frontend", status: "Intermediate" },
+
+  { id: 7, icon: SiNodedotjs, color: "#5FA04E", title: "Node.js", category: "Backend & Desktop", status: "Beginner" },
+  { id: 8, icon: SiExpress, color: "#FFFFFF", title: "Express.js", category: "Backend & Desktop", status: "Intermediate" },
+  { id: 9, icon: SiPhp, color: "#8892BF", title: "PHP", category: "Backend & Desktop", status: "Beginner" },
+  { id: 10, icon: SiCodeigniter, color: "#EF4223", title: "CodeIgniter", category: "Backend & Desktop", status: "Beginner" },
+  { id: 11, icon: SiCsharp, color: "#9B4F96", title: "C#", category: "Backend & Desktop", status: "Intermediate" },
+  { id: 12, icon: FaJava, color: "#F89820", title: "Java", category: "Backend & Desktop", status: "Beginner" },
+
+  { id: 13, icon: SiPostgresql, color: "#4169E1", title: "PostgreSQL", category: "Databases", status: "Intermediate" },
+  { id: 14, icon: SiMicrosoftsqlserver, color: "#CC2927", title: "SQL Server (SSMS)", category: "Databases", status: "Intermediate" },
+
+  { id: 15, icon: SiGithub, color: "#FFFFFF", title: "Git & GitHub", category: "Tools & AI", status: "Intermediate" },
+  { id: 16, icon: HiSparkles, color: "#D97757", title: "Claude AI", category: "Tools & AI", status: "Intermediate" },
+  { id: 17, icon: SiOpenai, color: "#FFFFFF", title: "ChatGPT", category: "Tools & AI", status: "Intermediate" },
 ];

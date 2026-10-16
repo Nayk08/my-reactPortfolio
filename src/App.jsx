@@ -1,16 +1,20 @@
-import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import MainContent from "./Pages/MainContent";
-import PortfolioContext from "./store/PortfolioContext";
+import AboutMe from "./Pages/AboutMe";
+import TechSkills from "./Pages/Skills";
+import Projects from "./Pages/Projects";
 
 function App() {
   return (
-    <PortfolioContext>
+    <>
       <Header />
-      <MainContent />
+      <main>
+        <AboutMe />
+        <TechSkills />
+        <Projects />
+      </main>
       <Footer />
-    </PortfolioContext>
+    </>
   );
 }
 

@@ -1,32 +1,15 @@
-export default function Section({
-  children,
-  grid = 2,
-  className = "",
-  bgClass = "bg-slate-900",
-  bgGradient = "from-slate-800/60 to-slate-900",
-}) {
-  // Map numbers to Tailwind classes
-  const colClasses = {
-    1: "md:grid-cols-1",
-    2: "md:grid-cols-2",
-    3: "md:grid-cols-3",
-    4: "md:grid-cols-4",
-    5: "md:grid-cols-5",
-  };
-
+export default function Section({ id, eyebrow, title, description, children }) {
   return (
-    <section className={`relative ${bgClass}`}>
-      {/* Background gradient */}
-      <div className={`absolute inset-0 bg-gradient-to-b ${bgGradient}`} />
-
-      <div className={`relative mx-auto max-w-7xl px-6 py-24 ${className}`}>
-        <div
-          className={`grid grid-cols-1 ${
-            colClasses[grid] || "md:grid-cols-2"
-          } ${grid === 1 ? "" : "gap-16 items-center"}`}
-        >
-          {children}
-        </div>
+    <section id={id} className="scroll-mt-16 border-t border-white/5 py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="text-sm font-medium text-sky-400">{eyebrow}</p>
+        <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          {title}
+        </h2>
+        {description && (
+          <p className="mt-4 max-w-2xl text-zinc-400">{description}</p>
+        )}
+        <div className="mt-12">{children}</div>
       </div>
     </section>
   );

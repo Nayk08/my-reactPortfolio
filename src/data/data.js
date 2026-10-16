@@ -1,6 +1,4 @@
-import fb from "../assets/icons8-facebook-logo-50.png";
-import github from "../assets/icons8-github-logo-50.png";
-import linkedIn from "../assets/icons8-linkedin-50.png";
+import { SiGithub, SiIndeed, SiLinkedin } from "react-icons/si";
 import Bryzahcov from "../assets/dentist.jpg";
 import TravelEase from "../assets/travelEase.jpg";
 
@@ -32,8 +30,6 @@ import Logbook from "../assets/Fitworx/Logboook.png";
 import Reservation from "../assets/Fitworx/Reservation.png";
 import Stock from "../assets/Fitworx/Stock.png";
 
-import indeed from "../assets/icons.png";
-
 import PetVetLanding from "../assets/PetVet/PetVetLanding.png";
 import PetVetSignIn from "../assets/PetVet/PetVetSignIn.png";
 import PetVetDashboard from "../assets/PetVet/PetVetDashboard.png";
@@ -41,73 +37,40 @@ import PetVetAppointmentCalendar from "../assets/PetVet/PetVetAppointmentCalenda
 import PetVetConsultationTable from "../assets/PetVet/PetVetConsultationTable.png";
 import PetVetGroomingTable from "../assets/PetVet/PetVetGroomingTable.png";
 import PetVetOperationTable from "../assets/PetVet/PetVetOperationTable.png";
-import PetVetClientRecords from "../assets/PetVet/PetVetClientRecords.png";
-import PetVetAddClientModal from "../assets/PetVet/PetVetAddClientModal.png";
-import PetVetPetRecords from "../assets/PetVet/PetVetPetRecords.png";
-import PetVetAddPetModal from "../assets/PetVet/PetVetAddPetModal.png";
 import PetVetCart from "../assets/PetVet/PetVetCart.png";
 import PetVetPaymentsTable from "../assets/PetVet/PetVetPaymentsTable.png";
-import PetVetPaymentDetailsModal from "../assets/PetVet/PetVetPaymentDetailsModal.png";
-import PetVetOrderSummaryModal from "../assets/PetVet/PetVetOrderSummaryModal.png";
 import PetVetInventory from "../assets/PetVet/PetVetInventory.png";
-import PetVetAddProductModal from "../assets/PetVet/PetVetAddProductModal.png";
-import PetVetUserManagement from "../assets/PetVet/PetVetUserManagement.png";
 import PetVetRolesManagement from "../assets/PetVet/PetVetRolesManagement.png";
 import PetVetPermissionMatrix from "../assets/PetVet/PetVetPermissionMatrix.png";
+import PetVetAnalytics from "../assets/PetVet/PetVetAnalytics.png";
+import PetVetMaintenance from "../assets/PetVet/PetVetMaintenance.png";
+import PetVetAnnouncements from "../assets/PetVet/PetVetAnnouncements.png";
 
 export const navBarData = [
-  {
-    id: 2,
-    title: "About",
-  },
-  {
-    id: 3,
-    title: "Skills",
-  },
-  {
-    id: 4,
-    title: "Projects",
-  },
+  { id: 1, title: "About" },
+  { id: 2, title: "Skills" },
+  { id: 3, title: "Projects" },
+  { id: 4, title: "Contact" },
 ];
 
-export const Myabout = [
+export const socials = [
   {
     id: 1,
-    icon: "💻",
-    description: "Web Developer",
-  },
-  {
-    id: 2,
-    icon: "🎓",
-    description: "IT Student",
-  },
-  {
-    id: 3,
-    icon: "⚛️",
-    description: "Aspiring React.js Developer",
-  },
-  {
-    id: 4,
-    icon: "🚀",
-    description: "Actively Upskilling",
-  },
-];
-
-export const email = [
-  {
-    id: 1,
+    label: "LinkedIn",
     link: "https://www.linkedin.com/in/kyanvillarin/",
-    icons: linkedIn,
+    icon: SiLinkedin,
   },
   {
     id: 2,
-    link: " https://github.com/Nayk08",
-    icons: github,
+    label: "GitHub",
+    link: "https://github.com/Nayk08",
+    icon: SiGithub,
   },
   {
     id: 3,
+    label: "Indeed",
     link: "https://profile.indeed.com/?hl=en_PH&co=PH&from=gnav-homepage",
-    icons: indeed,
+    icon: SiIndeed,
   },
 ];
 
@@ -117,6 +80,7 @@ export const projects = [
     image: TravelEase,
     status: "Finished",
     title: "Travel Ease",
+    timeline: "Jun 6, 2024 – May 26, 2025",
     Contributor: ["Kyan Villarin"],
     githubUrl: "https://github.com/Nayk08/TechnoSystem",
     technologyUsed: ["C#", "SSMS", "Winform"],
@@ -162,6 +126,7 @@ export const projects = [
     status: "Finished",
     Contributor: ["Kyan Villarin"],
     title: "Bryzahcov Dental System",
+    timeline: "May 26, 2025",
     githubUrl: "https://github.com/Nayk08/MiniCapstone_Scheduling",
     technologyUsed: ["C#", "SSMS", "Winform"],
 
@@ -197,7 +162,7 @@ export const projects = [
 
   {
     id: 3,
-    title: "Online-Sales-Inventory-System ",
+    title: "Online Sales & Inventory System",
     image: selflogo,
     status: "Postponed",
     Contributor: ["Kyan Villarin"],
@@ -260,9 +225,9 @@ export const projects = [
     status: "Finished",
     description:
       "A fitness center management system with member registration, class scheduling, and payment processing.",
-    title:
-      "ONLINE GYM FACILITY MANAGEMENT WITH SALES AND INVENTORY FOR FITWORX GYM",
-    githubUrl: "https://github.com/deloyxd/ogfmsi",
+    title: "Fitworx Gym Facility Management System",
+    timeline: "Jul 28, 2025 – Aug 15, 2026",
+    githubUrl: "https://github.com/jestleycharles/ogfmsi",
     websiteUrl: "https://fitworxgymph.web.app/",
     Contributor: [
       "Kyan Villarin",
@@ -273,9 +238,9 @@ export const projects = [
     technologyUsed: [
       "HTML",
       "CSS",
-      "JS",
-      " Tailwind CSS",
-      "ExpressJs",
+      "JavaScript",
+      "Tailwind CSS",
+      "Express.js",
       "MySQL",
       "Node.js",
       "Firebase",
@@ -326,7 +291,8 @@ export const projects = [
   {
     id: 5,
     image: PetVetLanding,
-    status: "In Progress",
+    status: "Finished",
+    timeline: "Jul 5 – Oct 16, 2026",
     title: "PetVet Cycle Animal and Grooming Center",
     Contributor: ["Kyan Villarin"],
     githubUrl: "https://github.com/Nayk08/Petvet",
@@ -339,15 +305,20 @@ export const projects = [
       "Zustand",
       "Tailwind CSS",
       "Radix UI",
+      "MUI Data Grid",
       "Node.js",
       "Express",
       "PostgreSQL",
       "Zod",
       "Cloudinary",
+      "Google OAuth",
+      "Brevo",
+      "Vercel",
       "Render",
+      "Claude Code",
     ],
     description:
-      "A full-stack veterinary clinic management system built around a database-driven Role-Based Access Control (RBAC) engine. Every navigation item, route, and API endpoint is gated by a permission matrix stored in PostgreSQL — nothing is hardcoded to a role name, so roles and their capabilities can be changed at runtime from the Permissions UI without touching code.",
+      "A full-stack veterinary clinic system with a staff app and a client portal, built around a database-driven Role-Based Access Control (RBAC) engine: every route, menu item and API endpoint is gated by a permission matrix in PostgreSQL that admins can change at runtime. Clients book appointments online with GCash deposits and manage their pets' profiles; staff handle scheduling, medical records, point-of-sale checkout, inventory with batch and expiry tracking, and sales analytics. Secured with server-side sessions, CSRF protection, rate limiting and sign-in OTP, and installable on phones as a mobile app.",
     content: [
       {
         id: 1,
@@ -397,31 +368,6 @@ export const projects = [
           "Real-time status tracking and record management for operations.",
       },
       {
-        id: 8,
-        image: PetVetClientRecords,
-        title: "Client Records",
-        description: "Manage client information and their linked pets.",
-      },
-      {
-        id: 9,
-        image: PetVetAddClientModal,
-        title: "Add New Client",
-        description: "Form for registering a new client into the system.",
-      },
-      {
-        id: 10,
-        image: PetVetPetRecords,
-        title: "Pet Records",
-        description:
-          "Per-client pet profiles including breed, weight, and medical details.",
-      },
-      {
-        id: 11,
-        image: PetVetAddPetModal,
-        title: "Add New Pet",
-        description: "Form for adding a pet to a client's profile.",
-      },
-      {
         id: 12,
         image: PetVetCart,
         title: "Point of Sale",
@@ -435,36 +381,11 @@ export const projects = [
           "Real-time tracking of payment records across the clinic.",
       },
       {
-        id: 14,
-        image: PetVetPaymentDetailsModal,
-        title: "Payment Details",
-        description: "Detailed breakdown of an individual payment record.",
-      },
-      {
-        id: 15,
-        image: PetVetOrderSummaryModal,
-        title: "Order Summary",
-        description:
-          "Checkout flow supporting cash, GCash, and split payments.",
-      },
-      {
         id: 16,
         image: PetVetInventory,
         title: "Inventory",
         description:
           "Stock and expiry tracking for clinic products and supplies.",
-      },
-      {
-        id: 17,
-        image: PetVetAddProductModal,
-        title: "Add New Product",
-        description: "Form for adding a new product to the inventory.",
-      },
-      {
-        id: 18,
-        image: PetVetUserManagement,
-        title: "User Management",
-        description: "Manage staff accounts, roles, and active status.",
       },
       {
         id: 19,
@@ -478,6 +399,26 @@ export const projects = [
         title: "Permission Matrix",
         description:
           "Runtime control over what each role can view, create, edit, delete, or export per module.",
+      },
+      {
+        id: 21,
+        image: PetVetAnalytics,
+        title: "Analytics",
+        description:
+          "Revenue trends, appointments by service and status, and sales over 7, 30 or 90 days.",
+      },
+      {
+        id: 22,
+        image: PetVetMaintenance,
+        title: "Maintenance",
+        description:
+          "Manage sub-services, prices, durations and weight-based pricing tiers.",
+      },
+      {
+        id: 23,
+        image: PetVetAnnouncements,
+        title: "Announcements",
+        description: "Post clinic announcements that appear on the public landing page.",
       },
     ],
   },
